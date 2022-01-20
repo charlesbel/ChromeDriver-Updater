@@ -5,7 +5,7 @@ from zipfile import ZipFile
 from io import BytesIO
 
 try:
-  webdriver.Chrome()
+  webdriver.Chrome().close()
 except:
   f = open("C:\Program Files\Google\Chrome\Application\chrome.VisualElementsManifest.xml", "r")
   parsedManifest = bs4.BeautifulSoup(f.read(), "xml")
